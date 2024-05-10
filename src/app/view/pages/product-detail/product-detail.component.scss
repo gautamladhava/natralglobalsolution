@@ -1,0 +1,218 @@
+@import 'main';
+.product-section {
+    @include rem-fallback(padding, 46, 0, 100);
+}
+.product {
+    display: flex;
+    @include rem-fallback(margin, 0, -25); 
+    .product-slider {
+        overflow: hidden;
+        @include rem-fallback(padding, 0, 25);
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .gallery-top {
+        overflow: hidden;
+        position: relative;
+        .swiper-slide {
+            background: $light_gray;
+            @include rem-fallback(max-height, 540);
+            @include rem-fallback(min-height, 540);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swiper-button-prev, 
+        .swiper-button-next {
+            color: $black1;
+            @include rem-fallback(width, 25);
+            @include rem-fallback(height, 25);
+            display: none;
+            &:after {
+                @include rem-fallback(font-size, 24);
+            }
+        } 
+    }
+    .gallery-thumbs {
+        @include rem-fallback(margin-top, 30);
+        .swiper-slide {
+            border: 1px solid $light_gray6;
+            @include rem-fallback(height, 160);
+            &.swiper-slide-thumb-active {
+                border-color: $light_gray2;
+            } 
+            .product-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+    }
+    .product-content {
+        @include rem-fallback(padding, 0, 25);
+        flex: 0 0 50%;
+        max-width: 50%;
+        @include rem-fallback(margin-top, -11);
+        h2 {
+            @include rem-fallback(line-height, 58);
+            @include rem-fallback(margin, 0,0,18);
+        }
+        p {
+            @include rem-fallback(line-height, 32);
+            @include rem-fallback(margin, 0,0,10);
+        }
+        ul {
+            @include rem-fallback(margin, 20,0); 
+        }
+        .add-counter-wrapper {
+            display: flex;
+            @include rem-fallback(gap, 20); 
+            @include rem-fallback(margin, 33,0,15); 
+            .btn-wrapper {
+                flex: 1;
+                .btn {
+                    @include rem-fallback(font-size, 18);
+                    @include rem-fallback(height, 56);
+                    width: 100%;
+                }
+            }
+        }
+        .total-qty {
+            @include rem-fallback(font-size, 16);
+            @include rem-fallback(line-height, 20);
+            background: $light-blue;
+            @include rem-fallback(padding, 7,0);
+            text-align: center;
+            font-weight: 500;
+            span {
+                font-weight: 700;
+            }
+        }
+    } 
+}
+::ng-deep {
+    .counter {
+        display: flex;
+        align-items: center;
+        @include rem-fallback(max-width, 172);
+        .counter-btn {
+            @include rem-fallback(width, 56);
+            @include rem-fallback(height, 56);
+            @include rem-fallback(min-width, 56);
+            border: 1px solid $light_gray9;
+            color: $light_gray9;
+            border-radius: 0; 
+            transition: all 0.3s;
+            .mdc-button__label {
+                line-height: 0;
+            }
+            &:hover {
+                color: $primary-color; 
+                border-color: $primary-color;
+            }
+        }  
+        input {
+            @include rem-fallback(width, 172);
+            @include rem-fallback(min-width, 1);
+            text-align: center;
+            border: 0;
+            @include rem-fallback(font-size, 30);
+            @include rem-fallback(line-height, 34);
+            color: $primary-color !important;
+            font-weight: 500;
+            font-family: "Figtree", sans-serif;
+        } 
+    }
+}
+
+
+.product-detail-section {
+    background: $light_gray1;
+    @include rem-fallback(padding, 30,0,100);
+}
+
+.product-scrollspy {
+    opacity: 0;
+    visibility: hidden;
+    background: $white;
+    border-bottom: 1px solid $light_gray6; 
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.product-details {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    li {
+        &:not(:last-child) {
+            @include rem-fallback(margin-right, 30);
+        }
+        a {
+            color: $black1;
+            @include rem-fallback(font-size, 16);
+            @include rem-fallback(line-height, 20);
+            @include rem-fallback(padding, 25,0);
+            font-weight: 500;
+            position: relative;
+            text-decoration: none;
+            &.active  {
+                color: $primary-color;
+                font-weight: 600;
+                &::after { 
+                    width: 100%;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                @include rem-fallback(height, 2);
+                @include rem-fallback(bottom, 0);
+                left: 0;
+                width: 0;
+                background-color: $primary-color;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+  
+.product-block {
+    background-color: rgb(255, 255, 255);
+    @include rem-fallback(padding, 40);
+    @include rem-fallback(margin-bottom, 40);
+    transition: background-color 0.5s ease;
+    position: sticky;
+    z-index: 1;   
+    box-shadow: 0px 8px 14px rgba(14, 33, 143, 0.05);
+    &.visible {
+        background: #fff !important;
+    }
+    &#more_information {
+      top: 100px;
+      transform: scale(1);
+    }
+    &#characteristics {
+      top: 110px;
+    }
+    &#video_instructions {
+      top: 120px;
+    }
+    &#warranty_info {
+      top: 130px;
+    }
+    &#services_info {
+      top: 140px;
+    }
+    &#download {
+        top: 150px;
+    }
+    &#comments {
+        top: 160px;
+    }
+}

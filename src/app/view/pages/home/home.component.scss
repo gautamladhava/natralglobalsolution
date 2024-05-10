@@ -1,0 +1,503 @@
+@import "main";
+
+
+.banner-section {
+    background-color: $primary-color;
+    color: $white;
+
+    .btn {
+        min-height: 56px;
+
+        @include bp(xs-max) {
+            min-height: auto;
+        }
+    }
+
+    h1 {
+        font-weight: 400;
+        @include rem-fallback(margin-bottom, 17);
+        line-height: 1.1;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .container {
+        @include rem-fallback(max-width, 1370);
+    }
+
+    p {
+        @include rem-fallback(font-size, 20);
+        @include rem-fallback(margin-bottom, 33);
+        line-height: 1.7;
+
+        @include bp(xs-max) {
+            @include rem-fallback(font-size, 16);
+
+        }
+    }
+
+    .hero-outer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include bp(sm-max) {
+            @include rem-fallback(padding-bottom, 300);
+            position: relative;
+        }
+
+        .hero-content {
+            @include rem-fallback(padding-top, 0);
+            flex: 0 0 40%;
+            max-width: 40%;
+            @include rem-fallback(padding, 30, 0);
+
+            @include bp(xlg-max) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            @include bp(sm-max) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                @include rem-fallback(margin-bottom, 30);
+                @include rem-fallback(padding, 20, 0);
+                @include rem-fallback(max-width, 600);
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                text-align: center
+            }
+        }
+
+        .hero-image {
+            @include rem-fallback(padding, 0, 0, 0, 10);
+            flex: 0 0 60%;
+            max-width: 60%;
+
+            @include bp(xlg-max) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            @include bp(sm-max) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                @include rem-fallback(padding, 0, 0, 0, 0);
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            img {
+                display: block;
+
+                @include bp(sm-max) {
+                    @include rem-fallback(max-width, 400);
+                    width: 100%;
+                    margin: 0 auto
+                }
+            }
+        }
+
+    }
+}
+
+.featured-products-section {
+    @include rem-fallback(padding, 100, 0);
+    background-color: $white;
+    position: relative;
+
+    @include bp(md-max) {
+        @include rem-fallback(padding, 40, 0);
+    }
+    @include bp(xs-max) {
+        @include rem-fallback(padding, 40, 0, 110);
+    }
+}
+
+.popular-service-section {
+    @include rem-fallback(padding, 100, 0, 110);
+    background-color: $light_gray1;
+
+    @include bp(md-max) {
+        @include rem-fallback(padding, 40, 0);
+        position: relative;
+    }
+    @include bp(xs-max) {
+        @include rem-fallback(padding, 40, 0, 110);
+    }
+}
+
+.article-section {
+    @include rem-fallback(padding, 100, 0);
+    background-color: $white;
+
+    @include bp(md-max) {
+        @include rem-fallback(padding, 40, 0);
+        position: relative;
+    }
+}
+
+.products-list-wrapper {
+    flex-wrap: nowrap;
+    @include rem-fallback(margin-bottom, 50);
+    .product-card{
+        @include rem-fallback(padding, 15);
+        @include bp(xs-max) {
+            @include rem-fallback(min-width, 265);
+        }
+    }
+}
+
+.popular-products-wrapper {
+    .card-outter {
+        @include rem-fallback(padding, 30);
+        @include rem-fallback(margin-bottom, 35);
+        background-color: $white;
+        transition: all 1s;
+
+        @include bp(xs-max) {
+            @include rem-fallback(padding, 15);
+            @include rem-fallback(margin-bottom, 20);
+        }
+        
+
+        &:hover {
+            transform: translateY(-8px);
+
+        }
+
+        &:last-child {
+            @include rem-fallback(margin-bottom, 0);
+        }
+
+        .product-card {
+            display: flex;
+            align-items: start;
+            flex-wrap: wrap;
+            @include rem-fallback(margin, 0, -15);
+
+            .product-card-imgae {
+                flex: 0 0 32%;
+                max-width: 32%;
+                @include rem-fallback(padding, 0, 15);
+                overflow: hidden;
+
+                @include bp(xs-max) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    @include rem-fallback(margin-bottom, 20);
+
+                }
+
+                a {
+                    overflow: hidden;
+                    display: block;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    display: block;
+                    transition: all 0.5s;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover
+                }
+
+                &:hover {
+                    img {
+
+                        transform: scale(1.03);
+                    }
+                }
+            }
+
+            .product-card-content {
+                flex: 0 0 68%;
+                max-width: 68%;
+
+                @include bp(xs-max) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+
+                @include rem-fallback(padding, 0, 15);
+
+                h4 {
+                    @include rem-fallback(margin-bottom, 8);
+                }
+
+                p {
+                    line-height: 2;
+                    @include rem-fallback(margin-bottom, 10)
+                }
+
+                .features-list {
+                    list-style: none;
+                    @include rem-fallback (margin-bottom, 25);
+
+                    li {
+                        @include rem-fallback(padding-left, 25);
+                        background-image: url(../../../../assets/images/list_style.svg);
+                        background-repeat: no-repeat;
+                        background-position: left 3px;
+                        @include rem-fallback(margin-bottom, 6);
+                        line-height: 2;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include rem-fallback(margin, 0, -25);
+    @include rem-fallback(margin-bottom, 100);
+
+    @include bp(sm-max) {
+        @include rem-fallback(margin, 0);
+        @include rem-fallback(margin-bottom, 40);
+    }
+
+    .card-content {
+        @include rem-fallback(padding, 0, 25);
+        flex: 0 0 60%;
+        max-width: 60%;
+
+        @include bp(sm-max) {
+            @include rem-fallback(padding, 0);
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        p {
+            @include rem-fallback(font-size, 48);
+            font-weight: 500;
+            @include rem-fallback(margin-bottom, 70);
+            @include rem-fallback(margin-top, -10);
+            line-height: 1.4;
+
+            @include bp(md-max) {
+                @include rem-fallback(font-size, 40);
+                @include rem-fallback(margin-bottom, 30);
+            }
+
+            @include bp(xs-max) {
+                @include rem-fallback(font-size, 30);
+                @include rem-fallback(margin-bottom, 30);
+            }
+
+            @include bp(xxxs-max) {
+                @include rem-fallback(font-size, 24);
+
+            }
+
+            span {
+                display: inline
+            }
+        }
+
+        .btn {
+            @include rem-fallback(padding, 20);
+            @include rem-fallback(height, 80);
+            @include rem-fallback(width, 80);
+            transition: all 0.5s;
+
+            &::after {
+                display: none;
+            }
+
+            @include bp(xlg-max) {
+                @include rem-fallback(padding, 10);
+                @include rem-fallback(height, 50);
+                @include rem-fallback(width, 47);
+                min-width: auto;
+
+            }
+
+            @include bp(xs-max) {
+                @include rem-fallback(padding, 10);
+                @include rem-fallback(height, 40);
+                @include rem-fallback(width, 42);
+                min-width: auto;
+
+            }
+
+            .up-arrow {
+                @include rem-fallback(margin, 0);
+
+                img {
+                    @include rem-fallback(height, 30);
+                    @include rem-fallback(width, 30);
+
+                    @include bp(xlg-max) {
+                        @include rem-fallback(height, 25);
+                        @include rem-fallback(width, 20);
+                    }
+
+                    @include bp(xs-max) {
+                        @include rem-fallback(height, 20);
+                        @include rem-fallback(width, 15);
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: $ivory;
+                background-color: $ivory;
+            }
+        }
+    }
+
+    .mask-image {
+        @include rem-fallback(padding, 0, 25);
+        flex: 0 0 38%;
+        max-width: 38%;
+        -webkit-mask-image: url(../../../../assets/images/mask_layer1.png);
+        mask-image: url(../../../../assets/images/mask_layer1.png);
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
+        // mask-size: contain ;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-origin: content-box;
+        position: relative;
+
+        @include bp(xlg-max) {
+            @include rem-fallback(padding, 0, 60);
+        }
+
+        @include bp(sm-max) {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+
+.hero-wrap-outer {
+    .swiper-pagination {
+        @include rem-fallback(bottom, 0);
+        width: auto;
+        right: 22%;
+        left: auto;
+        cursor:auto;
+
+        @include rem-fallback(padding,20);
+
+        @include bp(xlg-max) {
+            right: 17%;
+        }
+
+        @include bp(sm-max) {
+            left: 52%;
+            right: auto;
+            transform: translateX(-50%);
+            @include rem-fallback(bottom, -15);
+        }
+
+        .swiper-pagination-bullet {
+            background-color: rgba(255, 255, 255, 0.40) !important;
+            @include rem-fallback(height, 7);
+            @include rem-fallback(width, 7);
+            cursor: pointer;
+
+        }
+    }
+
+}
+
+::ng-deep .hero-wrap-outer {
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        background-color: rgba(255, 255, 255, 0.40);
+        opacity: 1;
+        @include rem-fallback(height, 7);
+        @include rem-fallback(width, 7);
+        transition: all 0.5s;
+        @include rem-fallback(margin, 0, 4)
+    }
+
+    .swiper-pagination-bullet-active.swiper-pagination-bullet {
+        background-color: $white !important;
+        width: 40px !important;
+        border-radius: 10px !important;
+
+        @include bp(md-max) {
+            width: 25px !important;
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.custom-cursor-block {
+    position: relative;
+    cursor: none;
+
+    .btn-wrapper {
+        .btn {
+            position: relative;
+            z-index: 2000;
+        }
+    }
+
+
+    .swiper-pagination-bullet {
+        cursor: no-drop;
+    }
+}
+
+.custom-cursor-block .cursor {
+    height: 56px;
+    width: 145px;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+    background-image: url(../../../../assets/images/cursor.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.custom-cursor-block.drag-cursor .cursor span {
+    display: none;
+}
+
+.custom-cursor-block .cursor.opacity {
+    opacity: 1;
+}

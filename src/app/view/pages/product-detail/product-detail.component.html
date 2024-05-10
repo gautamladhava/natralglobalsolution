@@ -1,0 +1,236 @@
+<div class="product-section">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Hardware</a>
+            </li>
+            <li>
+                <a href="#">Fiscal Cash Registers</a>
+            </li>
+            <li>
+                Fiscal Cash Register ELTRADE A3 
+            </li>
+        </ul>
+        <div class="product">
+            <div class="product-slider">
+                <div class="swiper-container gallery-top" #galleryTop>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img01.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img02.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img03.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img01.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                  
+                <div class="swiper-container gallery-thumbs" #galleryThumbs>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img01.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img02.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img03.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="../../../../assets/images/product-img01.png" alt="product"/> 
+                            </div>
+                        </div>
+                        <!-- Add more thumbnails as needed -->
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <h2>Fiscal Cash Register ELTRADE A3</h2>
+                <p>COMARCH EDI makes interchanging of documents such as orders, dispatch advices, invoices, receiving advices, etc., easy and fast. Other documents can also be exchanged via COMARCH EDI: inventory reports, sales reports, order responses, stock reconciliations, and all other kinds of documents. EDI reduces mistakes by validation at different stages</p>
+                <p>ELTRADE B3 is a stationary cash register with an elegant design and a wide range of functionalities. It is suitable for any type of business, but mostly for work in busy commercial sites:</p>
+                <ul class="list-icon">
+                    <li>COMARCH EDI makes interchanging of documents such as orders</li>
+                    <li>Wireless Bluetooth connection with peripheral devices</li>
+                    <li>Easy-load printing mechanism</li>
+                    <li>Connection to PC</li>
+                    <li>Cash drawer management</li>
+                </ul>
+                <div class="add-counter-wrapper">
+                    <div class="counter">
+                        <button mat-button (click)="decrement()" class="counter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="4" viewBox="0 0 12 4" fill="none">
+                                <path d="M0.166016 3.15473V0.000732422H11.566V3.15473H0.166016Z" fill="CurrentColor" />
+                            </svg>
+                        </button> 
+                        <input type="text" value='{{ count }}'>
+                        <button mat-button (click)="increment()" class="counter-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M7.37398 17.3282V0.000244141H10.452V17.3282H7.37398ZM0.22998 10.2222V7.14424H17.558V10.2222H0.22998Z" fill="CurrentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button mat-stroked-button class="btn yellow-bg img-btn"  title="Search">
+                            Add to Enquiry List
+                            <span class="right-arrow">
+                              <img src="../../../../assets/images/right_arrow.svg" alt="Right Arrow" />
+                            </span> 
+                          </button>
+                    </div>
+                </div>
+                <div class="total-qty">
+                    Minimum Order : <span>2 QTY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-detail-section" #triggerDiv id="triggerDiv">
+    <div #scrollDiv class="product-scrollspy" (window:scroll)="onWindowScroll()"> 
+        <div class="container">
+            <ul class="product-details" #paymentDetails>
+                <li>
+                    <a class="active" href="javascript:void(0)" title="More Information" data-value="more_information">
+                        More Information
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title="Characteristics" data-value="characteristics">
+                        Characteristics
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title="Video Instructions" data-value="video_instructions">
+                        Video Instructions
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title="Warranty Info" data-value="warranty_info">
+                        Warranty Info.
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title="Services Info" data-value="services_info">
+                        Services Info.
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title="Download" data-value="download">
+                        Download
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title="Comments" data-value="comments">
+                        Comments
+                    </a>
+                </li>
+            </ul>
+        </div>        
+    </div> 
+    <div class="container">
+        <div class="product-detail-outer"> 
+            <div class="product-block-wrap">
+              <div class="product-block visible" id="more_information" data-target="more_information">
+                <h4>More Information</h4>
+                <p>COMARCH EDI makes interchanging of documents such as orders, dispatch advices, invoices, receiving advices, etc., easy and fast. Other documents can also be exchanged via COMARCH EDI: inventory reports, sales reports, order responses, stock reconciliations, and all other kinds of documents. EDI reduces mistakes by validation at different stages</p>
+                <p>Makes interchanging of documents such as orders, dispatch advices, invoices, receiving advices, etc., easy and fast. Other documents can also be exchanged via COMARCH EDI: inventory reports, sales reports, order responses, stock reconciliations, and all other kinds of documents. EDI reduces mistakes by validation at different stages</p>
+                <ul class="list-icon">
+                    <li>COMARCH EDI makes interchanging of documents such as orders, dispatch advices</li>
+                    <li>Interchanging of documents such as orders, dispatch advices</li>
+                </ul>
+              </div>
+              <div class="product-block visible" id="characteristics" data-target="characteristics">
+                <h2>characteristics</h2>
+                <div class="card">
+                  <p>Make Payouts Para 1</p>
+                  <p>Make Payouts Para 2</p>
+                  <p>Make Payouts Para 3</p>
+                  <p>Make Payouts Para 4</p>
+                  <p>Make Payouts Para 5</p>
+                </div>
+              </div>
+              <div class="product-block visible" id="video_instructions" data-target="video_instructions">
+                <h2>video_instructions</h2>
+                <div class="card">
+                  <p>Start Business Banking Para 1</p>
+                  <p>Start Business Banking Para 2</p>
+                  <p>Start Business Banking Para 3</p>
+                  <p>Start Business Banking Para 4</p>
+                  <p>Start Business Banking Para 5</p>
+                  <p>Start Business Banking Para 1</p>
+                  <p>Start Business Banking Para 2</p>
+                  <p>Start Business Banking Para 3</p>
+                  <p>Start Business Banking Para 4</p>
+                  <p>Start Business Banking Para 5</p>
+                </div>
+              </div>
+              <div class="product-block visible" id="warranty_info" data-target="warranty_info">
+                <h2>warranty_info</h2>
+                <div class="card">
+                  <p>Automate Payroll Para 1</p>
+                  <p>Automate Payroll Para 2</p>
+                  <p>Automate Payroll Para 3</p>
+                  <p>Automate Payroll Para 4</p>
+                </div>
+              </div>
+              <div class="product-block visible" id="services_info" data-target="services_info">
+                <h2>services_info</h2>
+                <div class="card">
+                  <p>Get Credit & Loans Para 1</p>
+                  <p>Get Credit & Loans Para 2</p>
+                  <p>Get Credit & Loans Para 3</p>
+                  <p>Get Credit & Loans Para 4</p>
+                  <p>Get Credit & Loans Para 5</p>
+                </div>
+              </div>
+              <div class="product-block visible" id="download" data-target="download">
+                <h2>download</h2>
+                <div class="card">
+                  <p>Get Credit & Loans Para 1</p>
+                  <p>Get Credit & Loans Para 2</p>
+                  <p>Get Credit & Loans Para 3</p>
+                  <p>Get Credit & Loans Para 4</p>
+                  <p>Get Credit & Loans Para 5</p>
+                </div>
+              </div>
+              <div class="product-block visible" id="comments" data-target="comments">
+                <h2>download</h2>
+                <div class="card">
+                  <p>Get Credit & Loans Para 1</p>
+                  <p>Get Credit & Loans Para 2</p>
+                  <p>Get Credit & Loans Para 3</p>
+                  <p>Get Credit & Loans Para 4</p>
+                  <p>Get Credit & Loans Para 5</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

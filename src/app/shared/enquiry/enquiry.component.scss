@@ -1,0 +1,156 @@
+@import "main";
+
+.enpuiry-wrp {
+    display: flex;
+    flex-wrap: wrap;
+    @include rem-fallback(margin, 0, -8);
+
+    .inner-content {
+        @include rem-fallback(padding, 20,25);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+
+        h4 {
+            @include rem-fallback(margin-bottom, 30);
+            font-weight: 300;
+            @include rem-fallback(max-width,180);
+            @include bp(xs-max){
+                @include rem-fallback(margin-bottom, 20);
+            }
+        }
+
+        span {
+            @include rem-fallback(margin-bottom, 55);
+            @include rem-fallback(font-size, 24);
+            font-weight: 700;
+            @include bp(sm-max){
+                @include rem-fallback(font-size, 20);
+                
+            }
+            @include bp(xs-max){
+                @include rem-fallback(margin-bottom, 20);
+            }
+        }
+        .bottom-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include rem-fallback(margin-bottom, 5);
+            span {
+                @include rem-fallback(margin-bottom, 0);
+                @include rem-fallback(font-size, 20);
+                font-weight: 300;
+            }
+            .btn{
+                background-color: transparent;
+                @include rem-fallback(height,40);
+                // @include rem-fallback(width,40);
+                @include rem-fallback(padding,10);
+                img{
+                    @include rem-fallback(height,15);
+                    @include rem-fallback(width,20);
+                }
+                .up-arrow{
+                    @include rem-fallback(margin,0);
+                }
+            }
+        }
+    }
+
+    .col-1 {
+        flex: 0 0 23%;
+        max-width: 23%;
+        @include rem-fallback(padding, 0, 8);
+        @include bp(lg-max){
+            flex: 0 0 33.33%;
+            max-width: 33.33%;  
+        }
+        @include bp(xs-max){
+            flex: 0 0 50%;
+            max-width: 50%; 
+            @include rem-fallback(padding, 0, 8,10);
+        }
+        @include bp(xxxs-max){
+            flex: 0 0 100%;
+            max-width: 100%; 
+        }
+    }
+
+    .col-2 {
+        @include rem-fallback(padding, 0, 8);
+        flex: 0 0 54%;
+        max-width: 54%;
+        @include bp(lg-max){
+            flex: 0 0 33.33%;
+            max-width: 33.33%;  
+        }
+        @include bp(xs-max){
+            flex: 0 0 100%;
+            max-width: 100%; 
+        }
+    }
+}
+
+.enpuiry-wrp {
+    .inner-content {
+        .btn {
+            overflow: hidden;
+        }
+
+        .up-arrow {
+            position: relative;
+        }
+
+        .before_img {
+            transition: all 0.5s;
+            visibility: visible;
+        }
+
+        .after_img {
+            transition-delay: 1s;
+            transition: all 0.5s;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transform: translatey(20px) translateX(-20px);
+        }
+
+        &:hover {
+            span {
+
+                .before_img {
+                    transition: all 0.5s;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translatey(-20px) translateX(20px);
+                }
+
+                .after_img {
+                    transition: all 0.5s;
+                    transform: translatey(0) translateX(0);
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+} 
+.ivory-bg{
+    .btn{
+        &.blue-outline{
+            &:hover{
+                border-color: $primary-color;
+                &::after{
+                    display: none;
+                }
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+}

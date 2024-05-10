@@ -1,0 +1,456 @@
+.btn {
+    @include rem-fallback(font-size, 20);
+    @include rem-fallback(line-height, 24);
+    font-weight: 600;
+    @include rem-fallback(padding, 9, 20);
+    @include rem-fallback(height, 45);
+    letter-spacing: 0;
+    font-family: "Figtree", sans-serif;
+    border-radius: 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: relative;
+
+    @include bp(xs-max) {
+        @include rem-fallback(font-size, 18);
+        @include rem-fallback(padding, 9, 15);
+        @include rem-fallback(height, 40);
+    }
+
+    &.btn-sm {
+        @include rem-fallback(font-size, 16);
+        @include rem-fallback(line-height, 19);
+        @include rem-fallback(padding, 10, 30);
+        @include rem-fallback(height, 40);
+    }
+
+    &.btn-md {
+        @include rem-fallback(font-size, 18);
+
+        @include bp(xs-max) {
+            @include rem-fallback(font-size, 16);
+
+        }
+    }
+
+    &.btn-full {
+        width: 100%;
+
+        @include bp(xs-max) {
+            height: auto;
+        }
+    }
+
+    &.white-outline {
+        border-color: $white;
+        color: $white;
+    }
+
+    &.blue-outline {
+        border-color: $primary-color;
+        color: $primary-color;
+        background-color: $white;
+        transition: all 0.5s;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+            content: "";
+            background-color: $ivory;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            border-color: $ivory;
+
+            &::after {
+                height: 100%;
+            }
+        }
+
+    }
+
+    &.yellow-bg {
+        background: $light_yellow1;
+        color: $primary-color;
+    }
+
+    &.blue-bg {
+        color: $primary-color;
+        background-color: rgba(14, 33, 143, 0.05);
+        font-weight: 600;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 0;
+            width: 100%;
+            content: "";
+            background-color: $ivory;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            &::after {
+                height: 100%;
+            }
+        }
+    }
+
+    &.img-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: flex;
+        }
+
+        &:hover {
+            .right-arrow {
+                transform: translateX(3px);
+            }
+        }
+
+        .left-img {
+            @include rem-fallback(margin-right, 10);
+        }
+    }
+
+    .mdc-button__label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        .up-arrow {
+            img {
+                transform: translatey(-3px) translateX(3px);
+            }
+
+        }
+    }
+}
+
+::ng-deep {
+    .mat-mdc-outlined-button {
+        .mat-mdc-button-touch-target {
+            height: auto;
+        }
+    }
+}
+
+::ng-deep input {
+    color: $black1 !important;
+    @include rem-fallback(font-size, 16);
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: $light_gray2 !important;
+    }
+}
+
+.footer .mat-mdc-form-field-subscript-wrapper,
+.footer .mat-mdc-form-field-bottom-align::before {
+    display: none !important;
+}
+
+.mat-mdc-form-field {
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.toggle-btn{
+    .mat-button-toggle {
+        .mat-pseudo-checkbox{
+            display: none;
+        }
+    }
+    .mat-button-toggle-appearance-standard{
+        background-color: $light-blue;
+    }
+    .mat-button-toggle-appearance-standard.mat-button-toggle-checked{
+        background-color: $blue1;
+    }
+    .mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard+.mat-button-toggle-appearance-standard{
+        border-left: 0;
+    }
+    .mat-button-toggle-standalone.mat-button-toggle-appearance-standard, .mat-button-toggle-group-appearance-standard{
+        border: 0;
+        border-radius: 0;
+    }
+    svg{
+        @include rem-fallback(height,20);
+        @include rem-fallback(width,20);
+    }
+    .mat-button-toggle-checked{
+        svg{
+            path{
+                fill: $white;
+            }
+        }
+    }
+}
+
+::ng-deep {
+    div.mat-mdc-select-panel {
+        background-color: $light_gray1 !important;
+
+    }
+
+    div.mat-mdc-select-panel .mat-mdc-option {
+        --mdc-list-list-item-container-color: $light_gray1 !important;
+    }
+
+    .mat-mdc-option {
+        color: $black1 !important;
+    }
+
+    .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+        color: $primary-color !important;
+    }
+
+    .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after,
+    .mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after {
+        color: $primary-color !important;
+
+    }
+
+    .mat-mdc-select-value {
+        display: flex;
+        align-items: center;
+    }
+    .mat-mdc-option .mat-pseudo-checkbox-minimal{
+        display: none;
+    }
+}
+
+::ng-deep .custom-form-field {
+    @include rem-fallback(margin-bottom, 0);
+    .mat-mdc-select-placeholder{
+        color: $black1 ;
+    }
+    &.full-form-field {
+        .mat-mdc-form-field {
+            width: 100% !important;
+        }
+    }
+
+    .mat-mdc-form-field-error {
+        color: $red1;
+        @include rem-fallback(font-size, 14);
+
+        @include bp(xs-max) {
+            @include rem-fallback(font-size, 12);
+
+        }
+    }
+
+    .mat-mdc-form-field-error-wrapper {
+        padding: 0
+    }
+
+    .mat-mdc-form-field-subscript-wrapper {
+        @include rem-fallback(height, 25);
+
+    }
+
+    mat-label {
+        @include rem-fallback(margin-bottom, 8);
+        display: block;
+        @include rem-fallback(font-size, 14);
+    }
+
+    mat-form-field {
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: $light_gray1 !important;
+            border-radius: 0 !important;
+        }
+
+    }
+
+    .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+        @include rem-fallback(padding-right, 14)
+    }
+
+    .mdc-text-field {
+        @include rem-fallback(padding, 0, 20);
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+        color: $black1 !important;
+        caret-color: $black1;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+        border-bottom: 2px solid $light_gray7 !important;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+        border-bottom: 2px solid $primary-color !important;
+    }
+
+    .mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+        border-bottom: 2px solid $red1 !important;
+    }
+
+    &.custom-select-field {
+        .mat-mdc-text-field-wrapper {
+            // height: 48px !important;
+            @include rem-fallback(height, 48)
+        }
+
+        .mdc-text-field--outlined .mat-mdc-form-field-infix, .mdc-text-field--no-label .mat-mdc-form-field-infix {
+            @include rem-fallback(padding, 10, 0);
+        }
+
+        .mat-mdc-form-field-infix {
+            min-height: auto;
+            @include rem-fallback(min-width, 80);
+            @include rem-fallback(width, 80);
+        }
+
+        .mat-mdc-select {
+            color: $black1;
+        }
+
+        .mat-mdc-select-arrow {
+            background: url(../.../../images/arrow-down-black.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all 0.5s;
+            @include rem-fallback(height, 10);
+            @include rem-fallback(width, 10);
+            background-position: center;
+
+            svg {
+                display: none;
+            }
+        }
+        .mat-mdc-form-field-subscript-wrapper {
+            display: none;
+        }
+       
+    }
+
+   
+}
+
+.custom-form-field.custom-select-field .mat-mdc-select[aria-expanded=true] .mat-mdc-select-arrow {
+    transform:rotate(-180deg);
+}
+
+.mdc-form-field {
+    color: $black1 !important;
+}
+
+.pwd-field {
+    .mat-mdc-icon-button {
+        color: $light_gray8 ;
+    }
+}
+
+.checkbox {
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+        border: 1px solid $black1;
+
+    }
+
+    .mdc-form-field>label {
+        padding-right: 0;
+    }
+
+    .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+        border: 1px solid $black1;
+    }
+
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:focus:focus:not(:checked):not(:indeterminate)~.mdc-checkbox__background {
+        border: 1px solid $black1;
+
+    }
+
+    .mdc-checkbox {
+        @include rem-fallback(padding, 7);
+
+        .mdc-checkbox__background {
+            @include rem-fallback(height, 22);
+            @include rem-fallback(width, 22);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:focus:checked~.mdc-checkbox__background,
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:focus:indeterminate~.mdc-checkbox__background {
+        background-color: $primary-color;
+        border-color: $primary-color;
+
+    }
+
+    .mdc-checkbox .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark {
+        color: $white !important;
+        @include rem-fallback(height, 12);
+        @include rem-fallback(width, 12);
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,
+    .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,
+    .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+
+    .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,
+    .mdc-checkbox:hover .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,
+    .mdc-checkbox:hover .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+
+    .mat-mdc-checkbox-ripple,
+    .mdc-checkbox__ripple {
+        display: none !important;
+    }
+
+    a {
+        font-weight: normal !important;
+        color: $primary-color !important;
+        @include rem-fallback(margin-left, 10);
+        position: relative;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            width: 100%;
+            content: "";
+            background-color: $primary-color;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            &::after {
+
+                width: 0;
+            }
+        }
+    }
+}

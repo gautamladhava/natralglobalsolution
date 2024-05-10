@@ -1,0 +1,114 @@
+<section class="categories-section">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                Hardware
+            </li>
+        </ul>
+        <div class="page-heading">
+            <div class="heading-text">
+                <div class="custom-dropdown"  id="custom-dropdown1" #targetDiv1>
+                    <div (click)="openDropdown1()" class="custom-dropdown-seleted">
+                        <h2> {{selectedText1}}</h2>
+                    </div>
+                    <div *ngIf="dropdownOpen1" class="custom-dropdown-option" >
+                        <div class="item" (click)="selectItem('Hardware')">Hardware</div>
+                        <div class="item" (click)="selectItem('Software')">Software</div>
+                        <div class="item" (click)="selectItem('Consumables')">Consumables</div>
+                    </div>
+                </div>
+                <div class="shorting-wrap">
+                    <div class="custom-form-field custom-select-field">
+                        <mat-form-field>
+                            <mat-select placeholder="Sort-By">
+                                @for (option of shorting; track option) {
+                                <mat-option [value]="option.value">{{ option.viewValue }}</mat-option>
+                                }
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="toggle-btn">
+                        <mat-button-toggle-group [formControl]="viewControl" [(ngModel)]="selectedValue">
+                            <mat-button-toggle value="list-view">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.1667 19.1668H7.5C7 19.1668 6.66667 18.8335 6.66667 18.3335V15.0002C6.66667 14.5002 7 14.1668 7.5 14.1668H19.1667C19.6667 14.1668 20 14.5002 20 15.0002V18.3335C20 18.8335 19.6667 19.1668 19.1667 19.1668ZM4.16667 19.1668H0.833333C0.333333 19.1668 0 18.8335 0 18.3335V15.0002C0 14.5002 0.333333 14.1668 0.833333 14.1668H4.16667C4.66667 14.1668 5 14.5002 5 15.0002V18.3335C5 18.8335 4.66667 19.1668 4.16667 19.1668ZM19.1667 12.5002H7.5C7 12.5002 6.66667 12.1668 6.66667 11.6668V8.3335C6.66667 7.8335 7 7.50016 7.5 7.50016H19.1667C19.6667 7.50016 20 7.8335 20 8.3335V11.6668C20 12.1668 19.6667 12.5002 19.1667 12.5002ZM4.16667 12.5002H0.833333C0.333333 12.5002 0 12.1668 0 11.6668V8.3335C0 7.8335 0.333333 7.50016 0.833333 7.50016H4.16667C4.66667 7.50016 5 7.8335 5 8.3335V11.6668C5 12.1668 4.66667 12.5002 4.16667 12.5002ZM19.1667 5.8335H7.5C7 5.8335 6.66667 5.50016 6.66667 5.00016V1.66683C6.66667 1.16683 7 0.833496 7.5 0.833496H19.1667C19.6667 0.833496 20 1.16683 20 1.66683V5.00016C20 5.50016 19.6667 5.8335 19.1667 5.8335ZM4.16667 5.8335H0.833333C0.333333 5.8335 0 5.50016 0 5.00016V1.66683C0 1.16683 0.333333 0.833496 0.833333 0.833496H4.16667C4.66667 0.833496 5 1.16683 5 1.66683V5.00016C5 5.50016 4.66667 5.8335 4.16667 5.8335Z"
+                                        fill="#949494" />
+                                </svg>
+
+                            </mat-button-toggle>
+                            <mat-button-toggle value="grid-view" >
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_3811)">
+                                        <path
+                                            d="M5.36193 0H0.724242C0.404067 0 0.144531 0.259536 0.144531 0.579711V5.2174C0.144531 5.53757 0.404067 5.79711 0.724242 5.79711H5.36193C5.68211 5.79711 5.94164 5.53757 5.94164 5.2174V0.579711C5.94164 0.259536 5.68211 0 5.36193 0Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M12.318 0H7.6803C7.36012 0 7.10059 0.259536 7.10059 0.579711V5.2174C7.10059 5.53757 7.36012 5.79711 7.6803 5.79711H12.318C12.6382 5.79711 12.8977 5.53757 12.8977 5.2174V0.579711C12.8977 0.259536 12.6382 0 12.318 0Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M5.36193 6.95703H0.724242C0.404067 6.95703 0.144531 7.21657 0.144531 7.53674V12.1744C0.144531 12.4946 0.404067 12.7541 0.724242 12.7541H5.36193C5.68211 12.7541 5.94164 12.4946 5.94164 12.1744V7.53674C5.94164 7.21657 5.68211 6.95703 5.36193 6.95703Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M12.318 6.95703H7.6803C7.36012 6.95703 7.10059 7.21657 7.10059 7.53674V12.1744C7.10059 12.4946 7.36012 12.7541 7.6803 12.7541H12.318C12.6382 12.7541 12.8977 12.4946 12.8977 12.1744V7.53674C12.8977 7.21657 12.6382 6.95703 12.318 6.95703Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M19.275 0H14.6373C14.3171 0 14.0576 0.259536 14.0576 0.579711V5.2174C14.0576 5.53757 14.3171 5.79711 14.6373 5.79711H19.275C19.5952 5.79711 19.8547 5.53757 19.8547 5.2174V0.579711C19.8547 0.259536 19.5951 0 19.275 0Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M19.275 6.95703H14.6373C14.3172 6.95703 14.0576 7.21657 14.0576 7.53674V12.1744C14.0576 12.4946 14.3172 12.7541 14.6373 12.7541H19.275C19.5952 12.7541 19.8547 12.4946 19.8547 12.1744V7.53674C19.8547 7.21657 19.5951 6.95703 19.275 6.95703Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M5.36193 14.2029H0.724242C0.404067 14.2029 0.144531 14.4624 0.144531 14.7826V19.4203C0.144531 19.7405 0.404067 20 0.724242 20H5.36193C5.68211 20 5.94164 19.7405 5.94164 19.4203V14.7826C5.94164 14.4624 5.68211 14.2029 5.36193 14.2029Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M12.318 14.2031H7.6803C7.36012 14.2031 7.10059 14.4627 7.10059 14.7828V19.4205C7.10059 19.7407 7.36012 20.0002 7.6803 20.0002H12.318C12.6382 20.0002 12.8977 19.7407 12.8977 19.4205V14.7828C12.8977 14.4627 12.6382 14.2031 12.318 14.2031Z"
+                                            fill="#949494" />
+                                        <path
+                                            d="M19.275 14.2029H14.6373C14.3171 14.2029 14.0576 14.4624 14.0576 14.7826V19.4203C14.0576 19.7405 14.3171 20 14.6373 20H19.275C19.5952 20 19.8547 19.7405 19.8547 19.4203V14.7826C19.8547 14.4624 19.5951 14.2029 19.275 14.2029Z"
+                                            fill="#949494" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_3811">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                </div>
+            </div>
+            <p class="sub-text">
+                Natur Global Solutions offers full range of hardware and software solutions for your business
+            </p>
+        </div>
+        <div class="products-list-wrapper  {{viewControl.value}}">
+            <div class="product-card" *ngFor="let product of Featured_Products">
+                <div class="product-card-imgae">
+                    <a href="#" title="{{product.title}} "> <img src={{product.img}} alt=""></a>
+                </div>
+                <div class="product-card-content">
+                    <a href="#" title="{{product.title}}">
+                        <h5>{{product.title}} <span class="right-arrow"><img
+                                    src="../../../../assets/images/right_arrow.svg">
+                            </span> </h5>
+                    </a>
+                    <p>{{product.details}}</p>
+                    <div class="btn-wrapper">
+                        <button mat-stroked-button class="btn  blue-bg btn-md img-btn btn-full"
+                            title="View Products">View Products<span class="up-arrow"><img
+                                    src="../../../../assets/images/up_arrow_blue.svg" alt="">
+                            </span> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-enquiry></app-enquiry>
+    </div>
+</section>

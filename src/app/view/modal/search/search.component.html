@@ -1,0 +1,80 @@
+<div class="modal-wrapper">
+  <div class="search-blog">
+    <form>
+      <div class="form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Search Anything">
+        </mat-form-field>
+        <button mat-stroked-button class="btn yellow-bg img-btn" title="Search">
+          Search
+          <span class="right-arrow">
+            <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow" />
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <mat-dialog-actions class="close">
+    <button mat-button (click)="onNoClick()">
+      <img src="../../../../assets/images/close.svg" alt="close" />
+    </button>
+  </mat-dialog-actions>
+  <div class="search-result">
+    <mat-tab-group [selectedIndex]="selectedTabIndex" (selectedIndexChange)="onTabChange($event)"
+      mat-stretch-tabs="false" mat-align-tabs="start" class="tab">
+      <mat-tab label="Products">
+        <!-- <div class="product-list-outer">
+          <div class="product-list">
+            <app-product></app-product>
+          </div>
+          <div class="product-list">
+            <app-product></app-product>
+          </div>
+          <div class="product-list">
+            <app-product></app-product>
+          </div>
+          <div class="product-list">
+            <app-product></app-product>
+          </div>
+        </div> -->
+        <div class="products-list-wrapper grid-view list-view ">
+          <div class="product-list">
+            <app-product></app-product>
+            </div>
+            <div class="product-list">
+              <app-product></app-product>
+              </div>
+              <div class="product-list">
+                <app-product></app-product>
+                </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Services">
+        <div class="products-list-wrapper grid-view list-view ">
+          <div class="product-list">
+            <app-product></app-product>
+            </div>
+            <div class="product-list">
+              <app-product></app-product>
+              </div>
+              <div class="product-list">
+                <app-product></app-product>
+                </div>
+      </div>
+      </mat-tab>
+      <mat-tab label="Information">
+        <div class="products-list-wrapper grid-view list-view ">
+          <div class="product-list">
+            <app-product></app-product>
+            </div>
+              <div class="product-list">
+            <app-product></app-product>
+            </div>
+            <div class="product-list">
+              <app-product></app-product>
+              </div>
+      </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

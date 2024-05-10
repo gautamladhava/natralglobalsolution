@@ -1,0 +1,375 @@
+@import "main";
+
+.footer {
+    background-color: $light_gray1;
+    @include rem-fallback(padding, 40, 0, 0, 0);
+
+    @include bp(xxxs-max) {
+        @include rem-fallback(padding, 30, 0, 0, 0);
+    }
+
+    .footer-logo {
+        @include rem-fallback(margin-bottom, 35);
+        @include rem-fallback(max-width, 354);
+
+        @include bp(xxs-max) {
+            @include rem-fallback(max-width, 300);
+        }
+        
+        @include bp(xxxs-max) {
+            @include rem-fallback(max-width, 260);
+            @include rem-fallback(margin-bottom, 20);
+        }
+
+        img {
+            @include rem-fallback(max-width, 355);
+            width: 100%;
+
+            @include bp(xxxs-max) {
+                max-width: 100%
+            }
+        }
+    }
+
+    h5 {
+        @include rem-fallback(margin-bottom, 25);
+
+        @include bp(xxxs-max) {
+            @include rem-fallback(margin-bottom, 20);
+        }
+    }
+
+    .footer_nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include rem-fallback(margin, -10, -5);
+        @include rem-fallback(max-width, 250);
+
+        @include bp(xxxs-max) {
+            max-width: 100%;
+        }
+
+        li {
+            flex: 0 0 50%;
+            max-width: 50%;
+            @include rem-fallback(padding, 10, 5);
+
+            a {
+                color: $black1;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    .contact_link {
+        li {
+            &:last-child {
+                a {
+                    @include rem-fallback(margin-bottom, 0);
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                color: $black1;
+                transition: all 0.5s;
+                @include rem-fallback(margin-bottom, 25);
+                display: inline-flex;
+
+                @include bp(xs-max) {
+                    @include rem-fallback(margin-bottom, 20);
+                }
+
+
+                &:hover {
+                    color: $blue;
+
+                    svg {
+                        path {
+                            fill: $blue
+                        }
+                    }
+                }
+
+                i {
+                    @include rem-fallback(height, 21);
+                    @include rem-fallback(width, 21);
+                    @include rem-fallback(min-width, 21);
+                    @include rem-fallback(margin-right, 10);
+                    display: flex;
+                    align-items: center;
+                }
+
+                svg {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    transition: all 0.5s;
+
+                    path {
+                        transition: all 0.5s
+                    }
+                }
+            }
+        }
+    }
+
+    .top_footer {
+        @include rem-fallback(padding-bottom, 30);
+        border-bottom: 1px solid $light_gray4;
+
+        .footer-content-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @include rem-fallback(margin, 0, -10);
+
+            .footer-col {
+                @include rem-fallback(padding, 0, 10);
+
+                &.footer-col_1 {
+                    flex: 0 0 29%;
+                    max-width: 29%;
+                    width: 100%;
+
+                    @include bp(xs-max) {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+
+                    @include bp(xxxs-max) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        @include rem-fallback(margin-bottom, 40)
+                    }
+                }
+
+                &.footer-col_2 {
+                    flex: 0 0 28%;
+                    max-width: 28%;
+                    width: 100%;
+
+                    @include bp(xs-max) {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+
+                    @include bp(xxxs-max) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                &.footer-col_3 {
+                    flex: 0 0 43%;
+                    max-width: 43%;
+                    width: 100%;
+
+                    @include bp(xs-max) {
+                        flex: 0 0 100%;
+                        @include rem-fallback(max-width, 550);
+                        @include rem-fallback(margin-top, 40);
+                    }
+
+                    .form-field-wrap {
+                        .mat-mdc-form-field {
+                            background-color: $white;
+                            width: 100%;
+                            border: 1px solid $light_gray6;
+
+                            &:focus {
+                                border: 1px solid $blue;
+
+                            }
+                        }
+
+                        input::placeholder {
+                            color: $light_gray5;
+                            @include rem-fallback(font-size, 16);
+                        }
+
+                        .mat-mdc-form-field-subscript-wrapper,
+                        .mat-mdc-form-field-bottom-align::before {
+                            display: none;
+                        }
+                    }
+
+                    .btn {
+                        &::after {
+                            display: none;
+                        }
+
+                        &.blue-outline {
+                            outline: none;
+                            border: 0;
+                            @include rem-fallback(font-size, 16);
+
+                            @include bp(xxxs-max) {
+                                @include rem-fallback(font-size, 15);
+                                @include rem-fallback(padding, 10)
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .bottom-footer {
+        color: $black1;
+        @include rem-fallback(font-size, 16);
+
+        .footer-wrap1 {
+            @include rem-fallback(padding, 30, 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $light_gray4;
+
+            @include bp(xxxs-max) {
+                @include rem-fallback(padding, 15, 0);
+                flex-direction: column-reverse;
+            }
+
+            .language-select {
+                display: flex;
+                align-items: center;
+
+                @include bp(xxxs-max) {
+                    @include rem-fallback(margin-top, 15);
+                    text-align: center;
+                }
+
+                i {
+                    display: inline-flex;
+                    @include rem-fallback(margin-right, 10);
+                }
+            }
+
+            .social-link {
+                display: flex;
+                align-items: center;
+
+                li {
+                    @include rem-fallback(margin-right, 20);
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        display: block;
+
+                        img {
+                            display: block;
+                        }
+
+                        svg {
+                            display: block;
+                            transition: all 0.5s;
+
+                            path {
+                                transition: all 0.5s;
+                            }
+
+                        }
+
+                        &:hover {
+                            svg {
+                                path {
+                                    transition: all 0.5s;
+                                    fill: $ivory;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-wrap2 {
+            display: flex;
+            @include rem-fallback(padding, 30, 0);
+            justify-content: space-between;
+            align-items: center;
+
+            @include bp(xs-max) {
+                flex-direction: column-reverse;
+                @include rem-fallback(padding, 15, 0);
+            }
+
+            .copyright_text {
+                @include bp(xs-max) {
+                    text-align: center;
+                }
+            }
+
+            .footer-link {
+                display: flex;
+                align-items: center;
+
+                @include bp(xs-max) {
+                    @include rem-fallback(margin-bottom, 15)
+                }
+
+                li {
+                    @include rem-fallback(margin-right, 31);
+
+                    a {
+                        color: $light_gray2;
+                        transition: all 0.5s;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+::ng-deep .footer-col_3 {
+    .mat-mdc-form-field-infix {
+        @include bp(xxxs-max) {
+            @include rem-fallback(width, 120);
+        }
+    }
+}
+
+::ng-deep .footer {
+
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+        border-color: $blue !important;
+        border-width: 1px !important;
+        border-radius: 0 !important;
+    }
+
+    .mat-mdc-form-field-has-icon-suffix {
+        .mat-mdc-text-field-wrapper {
+            padding-right: 1px !important;
+        }
+    }
+
+    .mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+        .mdc-text-field__input {
+            caret-color: $black1 !important;
+        }
+    }
+
+}

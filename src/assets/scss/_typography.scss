@@ -1,0 +1,62 @@
+
+
+h1 {
+    @include rem-fallback(font-size, 68);
+    font-weight: 700;
+    @include bp(xlg-max){
+
+        @include rem-fallback(font-size, 57);
+    }
+    @include bp(lg-max){        
+        @include rem-fallback(font-size, 45);
+    }
+    @include bp(xs-max){
+        @include rem-fallback(font-size, 40);
+        
+    }
+    @include bp(xxxs-max){
+        @include rem-fallback(font-size,35);
+
+    }
+}
+
+h2 {
+    @include rem-fallback(font-size, 48);
+    font-weight: 700;
+    @include bp(lg-max){        
+        @include rem-fallback(font-size, 42);
+    }
+    @include bp(xs-max){
+        @include rem-fallback(font-size, 37);
+
+    }
+    @include bp(xxxs-max){
+        @include rem-fallback(font-size,32);
+    }
+}
+
+h3 {
+    @include rem-fallback(font-size, 38);
+    font-weight: 600;
+    @include bp(xs-max){
+        @include rem-fallback(font-size, 32);
+    }
+  
+}
+
+h4 {
+    @include rem-fallback(font-size, 24);
+    font-weight: 600;
+    @include bp(xs-max){
+        @include rem-fallback(font-size, 20 );
+
+    }
+}
+
+h5 {
+    @include rem-fallback(font-size, 20);
+    font-weight: 600;
+    @include bp(xs-max) {
+        @include rem-fallback(font-size, 18);
+    }
+}

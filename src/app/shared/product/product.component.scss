@@ -1,0 +1,43 @@
+@import 'main';
+.product {
+    display: flex;
+    @include rem-fallback(gap, 25); 
+    @include rem-fallback(padding-bottom, 26); 
+    border-bottom: 1px solid $light_gray6;
+    @include bp(xs-max) {
+        @include rem-fallback(gap, 20);
+        @include rem-fallback(padding-bottom, 18); 
+    }
+    @include bp(xxs-max) {
+        flex-direction: column;
+        @include rem-fallback(gap, 12); 
+    }
+    .product-img {
+        @include rem-fallback(max-width, 142); 
+        @include bp(xxs-max) {
+            max-width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .product-content {
+        h5 {
+            @include rem-fallback(line-height, 18); 
+            @include rem-fallback(margin, 0,0,10); 
+        }
+        p {
+            @include rem-fallback(line-height, 28); 
+            @include rem-fallback(margin, 0,0,13); 
+            @include bp(xs-max) {
+                @include rem-fallback(line-height, 24); 
+            }
+        }
+        .btn {
+            @include rem-fallback(min-width, 205);
+            @include bp(xxs-max) {
+                width: 100%;
+            } 
+        }
+    }
+}

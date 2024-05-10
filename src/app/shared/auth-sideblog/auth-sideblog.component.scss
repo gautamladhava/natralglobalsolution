@@ -1,0 +1,25 @@
+@import "main";
+
+.auth-custom {
+    color: $white;
+    z-index: 2;
+    position: relative;
+
+
+    h2 {
+        @include rem-fallback(margin-bottom, 20);
+        @include bp(sm-max){
+            @include rem-fallback(font-size, 35);
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    p {
+        @include rem-fallback(max-width, 600);
+        @include rem-fallback(font-size,20);
+        line-height: 1.9;
+    }
+}

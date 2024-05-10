@@ -1,0 +1,134 @@
+@import 'main';
+::ng-deep {
+    .search-dialog {
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: 100%;
+        .mat-mdc-dialog-surface {
+            position: relative;
+            border-radius: 0;
+            box-shadow: none;
+            background: $white;
+            @include rem-fallback(padding, 100,150,20);
+            @include bp(xlg-max) {
+                @include rem-fallback(padding, 100,100,20);
+            }
+            @include bp(lg-max) {
+                @include rem-fallback(padding, 70,70,20);
+            }
+            @include bp(md-max) {
+                @include rem-fallback(padding, 50,50,20);
+            }
+            @include bp(sm-max) {
+                @include rem-fallback(padding, 50,30,20);
+            }
+            @include bp(xs-max) {
+                @include rem-fallback(padding, 40,15,20);
+            }
+        }
+    }
+    .search-blog {
+        .form-group {
+            border-bottom: 2px solid $light_gray3;
+            @include rem-fallback(padding-bottom, 37);    
+            position: relative;
+            @include bp(lg-max) {
+                @include rem-fallback(padding-bottom, 30);    
+            }
+            .mat-mdc-form-field {
+                width: 100%;            
+                .mat-mdc-form-field-subscript-wrapper {
+                    display: none;
+                }
+                .mat-mdc-text-field-wrapper {
+                    background: transparent;
+                    border-radius: 0;
+                    padding: 0;
+                    .mat-mdc-form-field-focus-overlay,
+                    .mdc-line-ripple {
+                        display: none;
+                    }
+                }
+                .mat-mdc-form-field-infix {
+                    @include rem-fallback(padding, 0, 160, 0, 0);
+                    @include bp(lg-max) {
+                        @include rem-fallback(padding, 0, 145, 0, 0); 
+                    }
+                    @include bp(xxxs-max) {
+                        @include rem-fallback(padding, 0);
+                    }
+                    input {
+                        @include rem-fallback(font-size, 48);                        
+                        @include rem-fallback(line-height, 48); 
+                        font-weight: 700;
+                        font-family: "Figtree", sans-serif;  
+                        color: $primary-color !important; 
+                        &::placeholder {
+                            color: inherit !important;
+                        }  
+                        @include bp(lg-max) {
+                            @include rem-fallback(font-size, 40);                        
+                            @include rem-fallback(line-height, 40); 
+                        }   
+                        @include bp(md-max) {
+                            @include rem-fallback(font-size, 34);                        
+                            @include rem-fallback(line-height, 34); 
+                        }   
+                        @include bp(xs-max) {
+                            @include rem-fallback(font-size, 30);     
+                            @include rem-fallback(line-height, 30); 
+                        }   
+                        @include bp(xxxs-max) {
+                            @include rem-fallback(font-size, 26);     
+                            @include rem-fallback(line-height, 26);  
+                        }             
+                    }
+                }
+            }
+            .btn {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: auto;
+                @include rem-fallback(padding, 15,28); 
+                @include bp(lg-max) {
+                    @include rem-fallback(padding, 12,20); 
+                }
+                @include bp(xxxs-max) {
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    } 
+}
+.modal-wrapper {
+    .close {
+        position: absolute;
+        @include rem-fallback(top, 32); 
+        @include rem-fallback(right, 40); 
+        @include bp(lg-max) {
+            @include rem-fallback(top, 15); 
+            @include rem-fallback(right, 15);
+        }
+        @include bp(sm-max) {
+            @include rem-fallback(top, 5); 
+        }
+        @include bp(xs-max) {
+            @include rem-fallback(top, -5); 
+        }
+        .mdc-button {
+            @include rem-fallback(min-width, 1); 
+            @include bp(lg-max) {
+                @include rem-fallback(max-width, 20); 
+            }
+        }
+    }
+}
+
+.product-list{
+    border-bottom: 1px solid $light_gray6;
+    &:last-child{
+        border-bottom: none;
+    }
+}

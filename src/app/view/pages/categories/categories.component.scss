@@ -1,0 +1,39 @@
+@import "main";
+
+.categories-section {
+    @include rem-fallback(padding, 50, 0, 100);
+
+    @include bp(md-max) {
+        @include rem-fallback(padding, 40, 0);
+        position: relative;
+    }
+}
+
+.custom-dropdown-option {
+    background: $white !important;
+    @include rem-fallback(padding, 3, 0);
+    @include rem-fallback(min-width, 120);
+    @include rem-fallback(margin-top, 6);
+    box-shadow: 0px 2px 14px 0px #0E218F1A !important;
+    position: absolute;
+    right: 0;
+    will-change: transform, opacity;
+    transform-origin: right top;
+    z-index: 1111;
+
+    .item {
+        @include rem-fallback(min-height, 1);
+        @include rem-fallback(font-size, 14);
+
+        color: $black1;
+        letter-spacing: 0;
+        font-weight: 500;
+        @include rem-fallback(padding, 7, 16);
+        cursor: pointer;
+
+        &:hover {
+            background: $light-blue;
+        }
+    }
+}
+

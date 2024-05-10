@@ -1,0 +1,180 @@
+<section class="banner-section  custom-cursor-block  " id="custom-cursor-block" (pointerdown)="onmousedown($event)"
+    (pointerup)="onmouseup($event)" (mouseover)="onmouseover()" (mouseout)="onmouseout()"
+    (mousemove)="onmousemove($event)">
+    <div class="cursor" id="cursor">
+    </div>
+    <div class="container">
+        <div class="hero-wrap-outer swiper ">
+
+            <div class="hero-wrap swiper-wrapper">
+                <div class=" swiper-slide">
+                    <div class="hero-outer">
+                        <div class="hero-content">
+                            <h1>
+                                Leading Supplier
+                                For <span class="ivory-text"> Fiscal </span> & <span class="ivory-text">
+                                    POS Equipments</span>
+                            </h1>
+                            <p>
+                                A fully integrated ERP solution that covers virtually all aspects of a company's
+                                business,
+                                including
+                                finance, purchases, sales.
+                            </p>
+                            <div class="btn-wrapper">
+                                <button mat-stroked-button class="btn  blue-outline img-btn" title="Learn More"
+                                    (mouseover)="onmouseover1()" (mouseout)="onmouseout1()"> <span class="left-img"><img
+                                            src="../../../../assets/images/btn-img.svg">
+                                    </span> Learn More <span class="up-arrow"><img
+                                            src="../../../../assets/images/up_arrow_blue.svg">
+                                    </span> </button>
+                            </div>
+
+                        </div>
+                        <div class="hero-image">
+                            <img src="../../../../assets/images/banner_img2x.png">
+                        </div>
+                    </div>
+                </div>
+                <div class=" swiper-slide">
+                    <div class="hero-outer">
+                        <div class="hero-content">
+                            <h1>
+                                Leading Supplier
+                                For <span class="ivory-text"> Fiscal</span>
+                            </h1>
+                            <p>
+                                A fully integrated ERP solution that covers virtually all aspects of a company's
+                                business,
+                                including
+
+                            </p>
+                            <div class="btn-wrapper">
+                                <button mat-stroked-button class="btn  blue-outline img-btn" title="Learn More"
+                                (mouseover)="onmouseover1()" (mouseout)="onmouseout1()"> <span class="left-img"><img
+                                            src="../../../../assets/images/btn-img.svg">
+                                    </span> Learn More <span class="up-arrow"><img
+                                            src="../../../../assets/images/up_arrow_blue.svg">
+                                    </span> </button>
+                            </div>
+
+                        </div>
+                        <div class="hero-image">
+                            <img src="../../../../assets/images/banner_img2x.png">
+                        </div>
+                    </div>
+                </div>
+                <div class=" swiper-slide">
+                    <div class="hero-outer">
+                        <div class="hero-content">
+                            <h1>
+                                Leading Supplier
+                                For <span class="ivory-text"> Fiscal</span> & <span class="ivory-text">
+                                    POS Equipments</span>
+                            </h1>
+                            <p>
+                                A fully integrated ERP solution that covers virtually all aspects of a company's
+                                business,
+                                including
+                                finance, purchases, sales. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quos, nemo?
+                            </p>
+                            <div class="btn-wrapper">
+                                <button mat-stroked-button class="btn  blue-outline img-btn" title="Learn More"
+                                (mouseover)="onmouseover1()" (mouseout)="onmouseout1()"> <span class="left-img"><img
+                                            src="../../../../assets/images/btn-img.svg">
+                                    </span> Learn More <span class="up-arrow"><img
+                                            src="../../../../assets/images/up_arrow_blue.svg">
+                                    </span> </button>
+                            </div>
+
+                        </div>
+                        <div class="hero-image">
+                            <img src="../../../../assets/images/banner_img2x.png">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="swiper-pagination" (mouseover)="onmouseover1()" (mouseout)="onmouseout1()"></div>
+        </div>
+    </div>
+
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>   -->
+
+</section>
+
+<section class="featured-products-section ">
+    <div class="container">
+        <app-section-heading [section_text]="fsectiontext" [gradient_text]="fgradienttext"
+            [sub_text]="fsubtext"></app-section-heading>
+        <div class="products-list-wrapper">
+            <div class="product-card" *ngFor="let product of Featured_Products">
+                <div class="product-card-imgae">
+                    <a href="#" title="{{product.title}} "> <img src={{product.img}} alt=""></a>
+                </div>
+                <div class="product-card-content">
+                    <a href="#" title="{{product.title}}">
+                        <h5>{{product.title}} <span class="right-arrow"><img
+                                    src="../../../../assets/images/right_arrow.svg">
+                            </span> </h5>
+                    </a>
+                    <p>{{product.details}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="popular-service-section">
+    <div class="container">
+        <app-section-heading [section_text]="pssectiontext" [gradient_text]="psgradienttext"
+            [sub_text]="pssubtext"></app-section-heading>
+        <div class="popular-products-wrapper">
+            <div class="card-outter" *ngFor="let product of Popular_Services">
+                <div class="product-card">
+                    <div class="product-card-imgae">
+                        <a href="#" title={{product.title}}> <img src={{product.img}} alt=""></a>
+                    </div>
+                    <div class="product-card-content">
+                        <h4>{{product.title}}</h4>
+                        <p>{{product.details}}</p>
+                        <ul class="features-list">
+                            <li *ngFor="let product_list of product.features_list">{{product_list.feature}} </li>
+                        </ul>
+                        <div class="btn-wrapper">
+                            <button mat-stroked-button class="btn  blue-bg btn-md img-btn" title="More Details">More
+                                Details <span class="up-arrow"><img src="../../../../assets/images/up_arrow_blue.svg"
+                                        alt="">
+                                </span> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="article-section">
+    <div class="container">
+        <div class="card-wrapper" id="article-content">
+            <div class="card-content">
+                <p>Lets makes <span class="gradient-text bold-text"> Interchanging </span> of documents such as orders
+                    dispatch
+                    advices, invoices receiving <span class="gradient-text bold-text"> Advices</span>
+                    easy and fast. Other documents can also be <b class="gradient-text bold-text">
+                        exchanged</b> via inventory reports, sales reports</p>
+                <div class="btn-wrapper">
+                    <button mat-stroked-button class="btn  blue-outline img-btn move_arrow" title="View "> <span
+                            class="up-arrow "><img class="before_img" src="../../../../assets/images/bg_up_arrow.svg"
+                                alt=""><img class="after_img" src="../../../../assets/images/bg_up_arrow.svg" alt="">
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="mask-image" id="move-image">
+                <img src="../../../../assets/images/mask.jpg" alt="" id="img">
+            </div>
+        </div>
+        <app-enquiry></app-enquiry>
+
+    </div>
+</section>

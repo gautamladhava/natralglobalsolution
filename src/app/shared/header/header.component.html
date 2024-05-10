@@ -1,0 +1,404 @@
+<!-- add header in header-white class after login -->
+<div class="header header-white" id="header">
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-wrapper">
+                <div class="back-to-link">
+                    <a href="#" title="Back to Main Website">Back to Main Website</a>
+                </div>
+                <div class="custom-dropdown" id="custom-dropdown" #targetDiv>
+                    <div (click)="openDropdown()" class="custom-dropdown-seleted">
+                        {{selectedText}}
+                    </div> 
+                    <div *ngIf="dropdownOpen" class="custom-dropdown-option" >
+                        <div class="item" (click)="selectItem('English')">English</div>
+                        <div class="item" (click)="selectItem('French')">French</div> 
+                    </div>
+                </div> 
+            </div>
+        </div> 
+    </div>
+    <div class="bottom-header"> 
+        <div class="container">
+            <div class="bottom-header-wrapper">
+                <div class="logo-wrapper">
+                    <a href="#" title="Natur Global Solutions" class="logo">
+                        <img src="../../../assets/images/logo-white.svg" alt="Logo">
+                        <img class="black-logo" src="../../../assets/images/logo-black.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="right-blog">  
+                    <div class="mob-overlay" appClickOutside (click)="onClickOutside()"></div>
+                    <div class="nav-menu-wrapper">
+                        <div class="">
+                            <div class="nav-menu">
+                                <ul>
+                                    <li (mouseenter)="toggleMegaMenu()" (mouseleave)="closeMegaMenu()" (click)="toggleClass($event,'menu-open')">
+                                        <a title="Products" (mouseenter)="toggleMegaMenu()" [class.active]="megaMenuVisible" class="arrow" >
+                                            Products
+                                            <span >
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                                    <path d="M1 1L7 7L13 1" stroke="CurrentColor" stroke-width="1.5"/>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                        <div class="mega-menu">
+                                            <div class="container">
+                                                <div class="mega-meu-wrapper">
+                                                    <div class="menu-list">
+                                                        <ul>
+                                                            <li>
+                                                                <a class="active arrow">
+                                                                    <em>Hardware</em>
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                                                            <path d="M1 1L7 7L13 1" stroke="CurrentColor" stroke-width="1.5"/>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                                <!-- Mobile visible -->
+                                                                <div class="list-content-wrapper">
+                                                                    <div class="content-detail">
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Fiscal Cash Registers
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Fiscal Printers
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                POS equipment
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                POS printers
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Mobile terminals
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Electronic scales
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Self-service kiosks
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Barcode scanners
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <a class="arrow">
+                                                                    <em>Software</em>
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                                                            <path d="M1 1L7 7L13 1" stroke="CurrentColor" stroke-width="1.5"/>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                                <!-- Mobile visible -->
+                                                                <div class="list-content-wrapper">
+                                                                    <div class="content-detail">
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Fiscal Cash Registers
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <a class="arrow">
+                                                                    <em>Consumables</em>
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                                                            <path d="M1 1L7 7L13 1" stroke="CurrentColor" stroke-width="1.5"/>
+                                                                        </svg>
+                                                                    </span>
+                                                                </a>
+                                                                <!-- Mobile visible -->
+                                                                <div class="list-content-wrapper">
+                                                                    <div class="content-detail">
+                                                                        <div class="list-detail">
+                                                                            <a href="#">
+                                                                                <span class="img-wrap">
+                                                                                    <img src="../../../assets/images/product.png" alt="product">
+                                                                                </span> 
+                                                                                Fiscal Cash Registers
+                                                                                <span class="right-arrow">
+                                                                                    <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                                </span>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="list-content-wrapper">
+                                                        <div class="content-detail">
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    Fiscal Cash Registers
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    Fiscal Printers
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    POS equipment
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    POS printers
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    Mobile terminals
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    Electronic scales
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    Self-service kiosks
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="list-detail">
+                                                                <a href="#">
+                                                                    <span class="img-wrap">
+                                                                        <img src="../../../assets/images/product.png" alt="product">
+                                                                    </span> 
+                                                                    Barcode scanners
+                                                                    <span class="right-arrow">
+                                                                        <img src="../../../assets/images/right_arrow.svg" alt="Right Arrow">
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="curve-icon">
+                                                        <img src="../../../assets/images/curve-icon.svg" alt="curve icon" />
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <a title="Services" class="arrow">
+                                            Services 
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                                                    <path d="M1 1L7 7L13 1" stroke="CurrentColor" stroke-width="1.5"/>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" title="About">About </a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" title="Contact">Contact</a>
+                                    </li> 
+                                </ul> 
+                            </div>
+                            <!-- after login block hide start-->
+                            <div class="btn-wrapper">
+                                <button mat-stroked-button class="btn btn-sm blue-outline">Sign In</button>
+                            </div> 
+                            <!-- after login block hide start-->
+                        </div> 
+                        <div class="curve-icon">
+                            <img src="../../../assets/images/curve-icon.svg" alt="curve icon" />
+                        </div>
+                    </div>
+                    <div class="search-wrapper">
+                        <button mat-stroked-button class="search" (click)="openDialog()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"> 
+                                <path 
+                                    d="M21 21L15 15M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z" 
+                                    stroke="CurrentColor" 
+                                    stroke-width="1.5" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"/> 
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- after login block hide start-->
+                    <div class="btn-wrapper" style="display: none;">
+                        <button mat-stroked-button class="btn btn-sm white-outline">Sign In</button>
+                    </div>
+                    <!-- after login block hide start-->
+
+                    <!-- after login block visible start-->
+                    <button mat-icon-button [matMenuTriggerFor]="profileMenu" class="profile">
+                        <div class="avtar">
+                            <span>U</span>
+                            <!-- img required remove above span -->
+                            <!-- <img src="../../../assets/images/mask.jpg" alt="profile images"/> -->
+                        </div>
+                        <span class="name">Umang D</span>
+                    </button>
+                    <mat-menu #profileMenu="matMenu" class="profile-dropdown" [xPosition]="'before'" [yPosition]="'above'">
+                        <button mat-menu-item class="menu-item">
+                            <span class="icon">
+                                <img src="../../../assets/images/profile.svg" alt="profile"/>
+                            </span>
+                            Profile
+                        </button>
+                        <button mat-menu-item class="menu-item">
+                            <span class="icon">
+                                <img src="../../../assets/images/order.svg" alt="order"/>
+                            </span>
+                            Orders
+                        </button>
+                        <button mat-menu-item class="menu-item">
+                            <span class="icon">
+                                <img src="../../../assets/images/address.svg" alt="address"/>
+                            </span>
+                            Address
+                        </button>
+                        <button mat-menu-item class="menu-item">
+                            <span class="icon">
+                                <img src="../../../assets/images/password.svg" alt="password"/>
+                            </span>
+                            Change Password
+                        </button>
+                        <button mat-menu-item class="menu-item">
+                            <span class="icon">
+                                <img src="../../../assets/images/log-out.svg" alt="Log Out"/>
+                            </span>
+                            Log Out
+                        </button>
+                    </mat-menu>
+                    <!-- after login block visible End-->
+                    <div class="hamburger-menu" (click)="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>

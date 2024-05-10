@@ -1,0 +1,372 @@
+@import "main";
+
+.container {
+    max-width: 1440px;
+}
+
+.auth-wrap {
+    display: flex;
+    min-height: 100vh;
+    @include rem-fallback(margin, 0, -25);
+    flex-wrap: wrap;
+
+    .auth-left {
+        flex: 0 0 38%;
+        max-width: 38%;
+        @include rem-fallback(padding, 50);
+        @include rem-fallback(padding-bottom, 10);
+        color: $black1;
+
+        @include bp(md-max) {
+            @include rem-fallback(padding, 25);
+            flex: 0 0 100%;
+            // max-width: 550px;
+            @include rem-fallback(max-width, 600);
+            margin: 0 auto;
+        }
+    }
+
+    .auth-right {
+        flex: 0 0 62%;
+        max-width: 62%;
+        @include rem-fallback(padding, 25);
+        background-image: url(../../../assets/images/auth_bg_img.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        @include bp(md-max) {
+            display: none;
+
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: linear-gradient(180deg, rgba(18, 30, 99, 0) 52.54%, rgba(18, 30, 99, 0.664) 85.3%, rgba(18, 30, 99, 0.8) 100%);
+        }
+
+        // &::before {
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     content: "";
+        //     background-image: url(../../../assets/images/auth_before.png);
+        //     background-size: 50%;
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        // }
+    }
+}
+
+
+
+
+
+
+
+
+
+.auth-content-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .btn-wrap {
+        .btn {
+            font-weight: 700;
+            @include rem-fallback(height, 56);
+
+            @include bp(xs-max) {
+                height: auto;
+            }
+        }
+    }
+
+    .back-wrap {
+        display: flex;
+        align-items: baseline;
+
+        img {
+            @include rem-fallback(margin-right, 15);
+
+            @include bp(xs-max) {
+                @include rem-fallback(width, 24);
+            }
+        }
+
+    }
+
+    .auth-logo {
+        @include rem-fallback(margin-bottom, 47);
+
+        @include bp(md-max) {
+            @include rem-fallback(margin-bottom, 30);
+
+        }
+
+        @include bp(xs-max) {
+            @include rem-fallback(margin-bottom, 20);
+
+        }
+
+        img {
+            @include rem-fallback(max-width, 355);
+            width: 100%
+        }
+    }
+
+    h3 {
+        @include rem-fallback(margin-bottom, 17);
+        color: $black1;
+
+        @include bp(lg-max) {
+            @include rem-fallback(font-size, 30);
+        }
+
+        @include bp(xs-max) {
+            @include rem-fallback(margin-bottom, 15);
+        }
+
+        span {
+            display: block
+        }
+    }
+
+    .sub-content {
+        @include rem-fallback(font-size, 18);
+        @include rem-fallback(margin-bottom, 40);
+
+        @include bp(xs-max) {
+            @include rem-fallback(margin-bottom, 20);
+
+        }
+    }
+
+    .forgot-pwd-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include rem-fallback(margin-bottom,10);
+
+        a {
+            @include rem-fallback(font-size, 16);
+            font-weight: 600;
+            color: $black1;
+            transition: all 0.5s;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .btn-outer-wrap {
+        display: flex;
+        @include rem-fallback(margin, 0, -10);
+
+        .btn-wrap {
+            flex: 0 0 50%;
+            max-width: 50%;
+            @include rem-fallback(padding, 0, 10);
+
+            .btn {
+                color: $black1;
+                border: 1px solid $light_gray3;
+                @include rem-fallback(font-size, 18);
+                transition: all 0.5s;
+
+                &:hover {
+                    color: $primary-color;
+                }
+
+                @include bp(xs-max) {
+                    @include rem-fallback(font-size, 16);
+                }
+
+                .icon-wrap {
+                    display: flex;
+                    align-items: center;
+                    @include rem-fallback(margin-right, 10);
+                    @include rem-fallback(height, 24);
+                    @include rem-fallback(width, 24);
+                }
+            }
+        }
+    }
+
+
+    .login-block {
+        @include rem-fallback(margin-top, 17);
+
+        .continue-text {
+            @include rem-fallback(font-size, 16);
+            color: $light_gray2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                @include rem-fallback(height, 1);
+                width: 100%;
+                background-color: $light_gray4;
+                content: "";
+            }
+
+            span {
+                background-color: $white;
+                @include rem-fallback(padding, 10);
+                z-index: 2;
+            }
+        }
+    }
+
+    .top-content {
+        @include rem-fallback(margin-bottom, 20);
+
+        .img-wrap {
+            @include rem-fallback(margin-bottom, 27);
+            @include rem-fallback(margin-top, 10);
+            @include bp(xxs-max) {
+                @include rem-fallback(margin-bottom, 15);
+            @include rem-fallback(margin-top, 0);
+            }
+            img {
+                @include bp(xxs-max) {
+                    @include rem-fallback(height, 30);
+                }
+            }
+        }
+    }
+
+    .bottom-content {
+        text-align: center;
+
+        .btn-wrap {
+            @include rem-fallback(margin-bottom,30);
+            .btn {
+                &::after {
+                    display: none;
+                }
+                &:hover {
+                    span {
+                        &::after {
+                            width: 0;
+                        }
+                    }
+                }
+
+                span {
+                    position: relative;
+
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 1px;
+                        width: 100%;
+                        content: "";
+                        background-color: $primary-color;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        p {
+            @include rem-fallback(font-size, 16);
+            @include rem-fallback(margin-bottom, 25);
+
+            @include bp(xs-max) {
+                @include rem-fallback(margin-bottom, 15);
+
+            }
+
+            a {
+                font-weight: 600;
+                color: $primary-color;
+                transition: all 0.5s;
+                text-decoration: none;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    width: 100%;
+                    content: "";
+                    background-color: $primary-color;
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    &::after {
+
+                        width: 0;
+                    }
+                }
+            }
+        }
+
+        .bottom_link {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+
+            li {
+                @include rem-fallback(padding, 5, 0);
+
+                a {
+                    @include rem-fallback(padding, 0, 8);
+                    position: relative;
+                    color: $light_gray2;
+                    @include rem-fallback(font-size, 14);
+                    transition: all 0.5s;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: 2px;
+                        right: 0;
+                        height: 80%;
+                        @include rem-fallback(width, 2);
+                        background-color: $light_gray2;
+                    }
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+
+                }
+
+                &:last-child {
+                    a {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
