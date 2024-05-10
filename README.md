@@ -1,27 +1,11 @@
-# NaturGlobalFrontend
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Landing](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/818194fe-1626-4b9b-980e-ce1103e4fd08)
+![Login](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/3a49afb3-0fe9-4b67-934d-0ef1544135a8)
+![Sign Up](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/b3867583-754f-48e2-a6c1-fad31f7dcbdb)
+![Forgot Password](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/dbb3bf93-350a-4dae-b13b-e6cb2bc6c8ed)
+![Password Link Sent](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/e788d359-8fd4-4d3b-8010-22080a36a541)
+![Menu](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/3587170b-230a-45dd-85b7-399ffd279b8e)
+![Menu](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/e91af0c8-a24e-4d75-b9f9-94d770130f3b)
+![Search Result](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/878357f9-fc6b-4872-a7ea-6e622ec5774f)
+![Categories Grid](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/0f37cf76-d3ff-48fe-a238-cbff952c111b)
+![Categories List](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/faa22700-acf0-42ac-9ea2-9cfa569a43f1)
+![Product Details](https://github.com/gautamladhava/natralglobalsolution/assets/109068997/38050c7e-02d2-4fea-a72f-d0f8402fdd28)
